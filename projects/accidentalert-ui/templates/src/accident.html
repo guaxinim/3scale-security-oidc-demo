@@ -369,7 +369,7 @@
 				keycloak.updateToken(30).success(function () {
 					$.ajax({
 						type: "post",
-						contentType: "application/x-www-form-urlencoded",
+						contentType: "text/plain",
 						headers: {
 							'Authorization': 'Bearer ' + keycloak.token
 						},
