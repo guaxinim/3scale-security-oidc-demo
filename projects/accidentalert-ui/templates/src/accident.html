@@ -373,7 +373,6 @@
 						headers: {
 							'Authorization': 'Bearer ' + keycloak.token
 						},
-						crossDomain: true,
 						url: "http://localhost:8080/accidentcenter/report",
 						dataType: "json",
 						data: JSON.stringify($('#report').serializeObject()),
