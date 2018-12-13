@@ -371,7 +371,11 @@
 						type: "post",
 						contentType: "application/json",
 						headers: {
-							'Authorization': 'Bearer ' + keycloak.token
+							'Authorization': 'Bearer ' + keycloak.token,
+							'Access-Control-Allow-Credentials' : 'true', 
+							'Access-Control-Allow-Origin' :  '*', 
+							'Access-Control-Allow-Origins' : '*', 
+							'Content-Type': 'application/json'
 						},
 						crossDomain: true,
 						url: "http://localhost:8080/accidentcenter/report",
