@@ -373,6 +373,9 @@
 						url: "http://localhost:8080/accidentcenter/report",
 						dataType: "json",
 						data: JSON.stringify($('#report').serializeObject()),
+						beforeSend: function(xhr) {
+							xhr.setRequestHeader ("Authorization": "Bearer " + keycloak.token);
+					        },
 						success: function (data) {
 							$('#success-notification').show();
 						},
