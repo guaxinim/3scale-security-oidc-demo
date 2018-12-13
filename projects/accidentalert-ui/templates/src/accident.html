@@ -369,12 +369,7 @@
 				keycloak.updateToken(30).success(function () {
 					$.ajax({
 						type: "post",
-						contentType: "text/plain",
-						headers: {
-							'Authorization': 'Bearer ' + keycloak.token
-						},
-						crossDomain: true,
-						cache: false,
+						contentType: "application/x-www-form-urlencoded",
 						url: "http://localhost:8080/accidentcenter/report",
 						dataType: "json",
 						data: JSON.stringify($('#report').serializeObject()),
