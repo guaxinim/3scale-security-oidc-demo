@@ -375,7 +375,11 @@
 						data: JSON.stringify($('#report').serializeObject()),
 						beforeSend: function(xhr) {
 							xhr.setRequestHeader("Authorization", "Bearer " + keycloak.token);
-					        },
+						},
+						xhrFields: {
+							withCredentials: true
+						},
+						crossDomain: true
 						success: function (data) {
 							$('#success-notification').show();
 						},
